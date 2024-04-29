@@ -91,6 +91,39 @@
                 <header><strong>C++ is compiled or interpreted?</strong></header>
                 <p>C++ is primarily a compiled language. When you write a C++ program, you typically use a compiler (such as GCC, Clang, or Microsoft Visual C++) to translate your human-readable code into machine code, which the computer can execute directly. This compilation process creates an executable file that can be run independently of the source code.</p>
               </section>
+              <section class="main-section" id="functions">
+                <header><strong>Functions</strong></header>
+                <p>In C++, functions are blocks of code that perform a specific task. They are fundamental building blocks of C++ programs and help in organizing code, making it more modular, reusable, and easier to understand. Here's a basic overview of functions in C++:</p>
+                <ol>
+                  <li><strong>Syntax:</strong></li>
+                  <ul>
+                    <code>return_type function_name(parameters) {
+                    &nbsp;&nbsp;&nbsp;// Function body
+                    }
+                    </code>
+                    <li><strong>return_type:</strong> Specifies the data type of the value that the function returns. Use void if the function doesn't return any value.</li>
+                    <li><strong>function_name:</strong> Name of the function, which should be unique within its scope and follow naming conventions.</li>
+                    <li><strong>Parameters:</strong> Input values passed to the function. Parameters are optional, but if present, they should be declared within parentheses. Multiple parameters are separated by commas.</li>
+                    <code>// Function declaration
+                    int add(int a, int b) {
+                    &nbsp;&nbsp;&nbsp;&nbsp;return a + b;
+                    }
+      
+                    // Function call
+                    int result = add(3, 5); // result will be 8
+                    </code>
+                  </ul>
+                  <li><strong>Function Declaration vs. Definition:</strong></li>
+                  <p><strong>Declaration:</strong> Tells the compiler about the existence of a function. It includes the function signature (name, return type, and parameters) and ends with a semicolon. Declarations are usually placed in header files or at the beginning of source files.</p>
+                  <p><strong>Definition:</strong> Provides the implementation of the function. It includes the function body. Definitions are usually placed after the declaration.</p>
+                  <li><strong>Function Prototypes:</strong></li>
+                  <p>Function prototypes declare the function's signature before it's used in the program. This allows the compiler to recognize the function before its actual definition.</p>
+                  <p>Prototypes are often placed in header files.</p>
+                  <li><strong>Function Overloading:</strong></li>
+                  <p>C++ allows defining multiple functions with the same name but different parameter lists. This is called function overloading.</p>
+                  <p>Overloaded functions must have different parameter lists or different types of parameters.</p>
+                </ol>
+              </section>
         </main>
   </body>
 </html>
