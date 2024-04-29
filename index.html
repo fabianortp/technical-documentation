@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Technical Documentation Page</title>
+      <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+      <nav id="navbar">
+            <header>C++ Documentation</header>
+            <ul>
+            <li>
+            <a class="nav-link" href="#Basic_Structure">Basic Structure</a>
+            </li>
+            <li>
+            <a class="nav-link" href="#Interpreted_vs_Compiled_Languages">Interpreted vs Compiled Languages</a>
+            </li>
+            <li>
+            <a class="nav-link" href="#C++_is_compiled_or_interpreted?">C++ is compiled or interpreted?</a>
+            </li>
+            <li>
+            <a class="nav-link" href="#functions">Functions</a>
+            </li>
+            <li>
+            <a class="nav-link" href="#Object-Oriented_Programming_(OOP)">Object-Oriented Programming (OOP)</a>
+            </li>
+            </ul>
+      </nav>
+      <main id="main-doc">
+            <section class="main-section" id="Basic_Structure">
+                <header><strong>Basic Structure</strong></header>
+                <p>The basic structure of a C++ program typically consists of several elements, arranged in a specific order:</p>
+                <ol>
+                    <li><strong>Preprocessor Directives:</strong> These are lines in your code that begin with a hash (#) symbol. They are commands to the compiler to perform certain tasks before compilation. Common preprocessor directives include including header files (#include), defining constants (#define), and conditional compilation (#ifdef, #ifndef, #endif).</li>
+                    <code>#include &lt;iostream&gt;
+                    </code>
+                    <li><strong>Namespace Declaration:</strong> Namespaces are used to organize code into logical groups and prevent naming conflicts. The standard namespace for C++ standard library functions is std.</li>
+                    <code>using namespace std;
+                    </code> 
+                    <li><strong>Main Function:</strong> Every C++ program must have a main function. Execution of the program starts from the main function.</li>
+                    <code>int main() {
+                    &nbsp;&nbsp;&nbsp;// Your code here
+                    &nbsp;&nbsp;&nbsp;return 0;
+                    }
+                    </code>  
+                    <li><strong>Function Definitions:</strong> After the main function, you may define other functions that are called from within the main function or from other functions.</li>
+                    <code>void myFunction() {
+                    &nbsp;&nbsp;&nbsp;// Function code
+                    </code>  
+                    <li><strong>Variable Declarations:</strong> You can declare variables anywhere within the code. However, it's common to declare them at the beginning of functions or at the top of the file for global variables.</li>
+                    <code>int myVariable = 10;
+                    </code>
+                    <li><strong>Statements and Expressions:</strong> These are the actual instructions that the program executes. Statements perform actions, and expressions produce values.</li>
+                    <code>int sum = 5 + 7; // Expression
+                    cout << "The sum is: " << sum << endl; // Statement
+                    </code>
+                    <li><strong>Comments:</strong> Comments are used to document your code for yourself and others. They are ignored by the compiler and serve as notes within the code.</li>
+                    <code>// This is a single-line comment
+
+                    /*
+                    This is a
+                    multi-line comment
+                    */
+                    </code>
+                </ol>
+            </section>
+        </main>
+  </body>
+</html>
