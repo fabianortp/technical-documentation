@@ -37,9 +37,7 @@ body {
   }
 
   
-  header {
-    padding: 8px 20px;
-  }
+  
   
   #navbar a {
     display: block;
@@ -72,7 +70,8 @@ body {
   }
   
   header {
-    color: black;
+    padding: 8px 20px;
+    color: #3b017e;
     margin: 10px;
     text-align: center;
     font-size: 1.6em;
