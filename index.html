@@ -124,6 +124,146 @@
                   <p>Overloaded functions must have different parameter lists or different types of parameters.</p>
                 </ol>
               </section>
+              <section class="main-section" id="Object-Oriented_Programming_(OOP)">
+                <header><strong>Object-Oriented Programming (OOP)</strong></header>
+                <p>Object-Oriented Programming (OOP) in C++ provides a powerful way to organize and structure code, making it easier to manage and maintain. </p>
+                  <ol>
+                    <li><strong>Classes and Objects:</strong> Classes are user-defined data types that serve as blueprints for creating objects. Objects are instances of classes that encapsulate data (attributes) and behavior (methods).</li>
+                    <code>#include &lt;iostream&gt;
+      
+                    // Class definition
+                    class Rectangle {
+                    public:
+                    &nbsp;&nbsp;&nbsp;&nbsp;int length;
+                    &nbsp;&nbsp;&nbsp;&nbsp;int width;
+      
+                    &nbsp;&nbsp;&nbsp;&nbsp;// Method to calculate area
+                    &nbsp;&nbsp;&nbsp;&nbsp;int calculateArea() {
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return length * width;
+                    &nbsp;&nbsp;&nbsp;}
+                    };
+      
+                    int main() {
+                    &nbsp;&nbsp;&nbsp;// Creating objects of the Rectangle class
+                    &nbsp;&nbsp;&nbsp;Rectangle rect1;
+                    &nbsp;&nbsp;&nbsp;rect1.length = 5;
+                    &nbsp;&nbsp;&nbsp;rect1.width = 3;
+      
+                    &nbsp;&nbsp;&nbsp;// Accessing data members and methods using objects
+                    &nbsp;&nbsp;&nbsp;std::cout << "Area of Rectangle: " << rect1.calculateArea() << std::endl;
+      
+                    &nbsp;&nbsp;&nbsp;return 0;
+                    }
+                    </code>
+                    <li><strong>Encapsulation:</strong> Refers to bundling data (attributes) and methods (functions) that operate on the data into a single unit (class). It hides the internal implementation details of an object and provides controlled access to its members.</li>
+                    <code>#include &lt;iostream&gt;
+                    #include &lt;string&gt;
+      
+                    class Employee {
+                    private:
+                    &nbsp;&nbsp;&nbsp;std::string name;
+                    &nbsp;&nbsp;&nbsp;int age;
+      
+                    public:
+                    &nbsp;&nbsp;&nbsp;// Setter methods for name and age
+                    &nbsp;&nbsp;&nbsp;void setName(std::string newName) {
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name = newName;
+                    &nbsp;&nbsp;&nbsp;}
+      
+                    &nbsp;&nbsp;&nbsp;void setAge(int newAge) {
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age = newAge;
+                    &nbsp;&nbsp;&nbsp;}
+      
+                    &nbsp;&nbsp;&nbsp;// Getter methods for name and age
+                    &nbsp;&nbsp;&nbsp;std::string getName() {
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return name;
+                    &nbsp;&nbsp;&nbsp;}
+      
+                    &nbsp;&nbsp;&nbsp;int getAge() {
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return age;
+                    &nbsp;&nbsp;&nbsp;}
+                    };
+      
+                    int main() {
+                    &nbsp;&nbsp;&nbsp;// Creating an object of the Employee class
+                    &nbsp;&nbsp;&nbsp;Employee emp1;
+      
+                    &nbsp;&nbsp;&nbsp;// Setting and accessing private members using public methods
+                    &nbsp;&nbsp;&nbsp;emp1.setName("John");
+                    &nbsp;&nbsp;&nbsp;emp1.setAge(30);
+      
+                    &nbsp;&nbsp;&nbsp;std::cout << "Employee Name: " << emp1.getName() << std::endl;
+                    &nbsp;&nbsp;&nbsp;std::cout << "Employee Age: " << emp1.getAge() << std::endl;
+      
+                    return 0;
+                    }
+                    </code>
+                    <li><strong>Inheritance:</strong> Allows a class (derived or child class) to inherit properties and behaviors from another class (base or parent class). It promotes code reuse and facilitates the creation of a hierarchy of classes.</li>
+                    <code>#include &lt;iostream&gt;
+      
+                    // Base class
+                    class Shape {
+                    public:
+                    &nbsp;&nbsp;&nbsp;void draw() {
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout << "Drawing a shape." << std::endl;
+                    &nbsp;&nbsp;&nbsp;}
+                    };
+      
+                    // Derived class
+                    class Circle : public Shape {
+                    public:
+                    &nbsp;&nbsp;&nbsp;void draw() {
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout << "Drawing a circle." << std::endl;
+                    &nbsp;&nbsp;&nbsp;}
+                    };
+      
+                    int main() {
+                    &nbsp;&nbsp;&nbsp;// Creating an object of the Circle class
+                    &nbsp;&nbsp;&nbsp;Circle circle;
+      
+                    &nbsp;&nbsp;&nbsp;// Accessing methods from the base and derived classes
+                    &nbsp;&nbsp;&nbsp;circle.draw(); // Output: "Drawing a circle."
+      
+                    &nbsp;&nbsp;&nbsp;return 0;
+                    }
+                    </code>
+                    <li><strong>Polymorphism:</strong> Allows objects of different classes to be treated as objects of a common superclass. It enables methods to be invoked based on the actual object type at runtime, promoting flexibility and extensibility.</li>
+                    <code>#include &lt;iostream&gt;
+      
+                    // Base class
+                    class Animal {
+                    public:
+                    &nbsp;&nbsp;&nbsp;// Virtual method
+                    &nbsp;&nbsp;&nbsp;virtual void makeSound() {
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout << "Animal makes a sound." << std::endl;
+                    &nbsp;&nbsp;&nbsp;}
+                    };
+      
+                    // Derived class
+                    class Dog : public Animal {
+                    public:
+                    &nbsp;&nbsp;&nbsp;// Override method
+                    &nbsp;&nbsp;&nbsp;void makeSound() override {
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout << "Dog barks." << std::endl;
+                    &nbsp;&nbsp;&nbsp;}
+                    };
+      
+                    int main() {
+                    &nbsp;&nbsp;&nbsp;// Creating a pointer to the base class
+                    &nbsp;&nbsp;&nbsp;Animal* animal = new Dog();
+      
+                    &nbsp;&nbsp;&nbsp;// Accessing overridden method using base class pointer
+                    &nbsp;&nbsp;&nbsp;animal->makeSound(); // Output: "Dog barks."
+      
+                    &nbsp;&nbsp;&nbsp;delete animal; // Freeing allocated memory
+      
+                    &nbsp;&nbsp;&nbsp;return 0;
+                    }
+                    </code>
+                    <li><strong>Abstraction:</strong> Involves hiding the complex implementation details of objects and exposing only the essential features. It allows programmers to focus on what an object does rather than how it does it.</li>
+                    <p>Sample: Abstraction is a design concept and doesn't have a direct code representation. However, classes and interfaces in C++ can be used to achieve abstraction by providing a clear separation between interface and implementation details.</p>
+                  </ol>
+              </section>
         </main>
   </body>
 </html>
